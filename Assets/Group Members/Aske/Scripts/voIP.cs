@@ -6,6 +6,7 @@ using Unity.Services.Authentication;
 using Unity.Services.Core;
 using Unity.Services.Vivox;
 
+    
 public class voIP : MonoBehaviour
 {
     async void InitializeAsync()
@@ -13,15 +14,15 @@ public class voIP : MonoBehaviour
         await UnityServices.InitializeAsync();
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
 
-        await VivoxService.Instance.InitializeAsync();
+        //await VivoxService.Instance.InitializeAsync();
     }
 
     public async void LoginToVivoxAsync()
     {
-        LoginOptions options = new LoginOptions();
-        options.DisplayName = UserDisplayName;
-        options.EnableTTS = true;
-        await VivoxService.Instance.LoginAsync(options);
+        //LoginOptions options = new LoginOptions();
+        //options.DisplayName = UserDisplayName;
+        //options.EnableTTS = true;
+        //await VivoxService.Instance.LoginAsync(options);
     }
 
     // Start is called before the first frame update
