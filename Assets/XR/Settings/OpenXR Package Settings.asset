@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: MetaXREyeTrackedFoveationFeature Standalone
   m_EditorClassIdentifier: 
   m_enabled: 0
+  <failedInitialization>k__BackingField: 0
   nameUi: Meta XR Eye Tracked Foveation
   version: 0.0.1
   featureIdInternal: com.meta.openxr.feature.eyetrackedfoveation
@@ -128,9 +129,6 @@ MonoBehaviour:
   - {fileID: -780406394933612575}
   - {fileID: 775429576501478413}
   - {fileID: 731085655539295898}
-  - {fileID: -4704934390868060575}
-  - {fileID: -1930836654200599137}
-  - {fileID: 3344484428970054432}
   - {fileID: -6022391568403496099}
   - {fileID: -3262153808659349761}
   - {fileID: -567951610028258050}
@@ -232,6 +230,7 @@ MonoBehaviour:
   m_Name: MetaXREyeTrackedFoveationFeature Android
   m_EditorClassIdentifier: 
   m_enabled: 0
+  <failedInitialization>k__BackingField: 0
   nameUi: Meta XR Eye Tracked Foveation
   version: 0.0.1
   featureIdInternal: com.meta.openxr.feature.eyetrackedfoveation
@@ -273,6 +272,7 @@ MonoBehaviour:
   m_Name: MetaXRFeature Standalone
   m_EditorClassIdentifier: 
   m_enabled: 1
+  <failedInitialization>k__BackingField: 1
   nameUi: Meta XR Feature
   version: 0.0.1
   featureIdInternal: com.meta.openxr.feature.metaxr
@@ -366,6 +366,7 @@ MonoBehaviour:
   m_Name: MetaXRFeature Android
   m_EditorClassIdentifier: 
   m_enabled: 1
+  <failedInitialization>k__BackingField: 0
   nameUi: Meta XR Feature
   version: 0.0.1
   featureIdInternal: com.meta.openxr.feature.metaxr
@@ -711,6 +712,7 @@ MonoBehaviour:
   m_Name: MetaXRFoveationFeature Android
   m_EditorClassIdentifier: 
   m_enabled: 1
+  <failedInitialization>k__BackingField: 0
   nameUi: Meta XR Foveation
   version: 1.0.0
   featureIdInternal: com.meta.openxr.feature.foveation
@@ -761,9 +763,6 @@ MonoBehaviour:
   - {fileID: -131755475664192566}
   - {fileID: 8360562650284255519}
   - {fileID: -5371898349732254284}
-  - {fileID: -8476667986677629037}
-  - {fileID: -3612297488702713518}
-  - {fileID: 8698205122752449667}
   - {fileID: -431540449743923455}
   - {fileID: 9116528161381375076}
   - {fileID: 3872950487941649776}
@@ -826,6 +825,7 @@ MonoBehaviour:
   m_Name: MetaXRFoveationFeature Standalone
   m_EditorClassIdentifier: 
   m_enabled: 1
+  <failedInitialization>k__BackingField: 0
   nameUi: Meta XR Foveation
   version: 1.0.0
   featureIdInternal: com.meta.openxr.feature.foveation
