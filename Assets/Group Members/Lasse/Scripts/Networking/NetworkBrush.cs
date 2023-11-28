@@ -126,6 +126,7 @@ public class NetworkBrush : NetworkBehaviour
 
     private void Update()
     {
-        SpawnNetworkBrushServerRpc();
+        if(IsOwner)
+            SpawnNetworkBrushServerRpc();
     }
 }
