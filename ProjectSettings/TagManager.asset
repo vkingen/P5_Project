@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bicycle_Main
+  - Cykelstyr
+  - "Cykels\xE6de"
+  - Cykelhjul
   layers:
   - Default
   - TransparentFX
