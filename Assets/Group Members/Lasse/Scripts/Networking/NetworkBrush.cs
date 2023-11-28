@@ -17,7 +17,8 @@ public class NetworkBrush : NetworkBehaviour
     //A list to hold the gameobjects instantiated, in order to be able to delete them again
     public List<GameObject> sceneObjects = new List<GameObject>();
 
-    private void Update()
+    [ServerRpc(RequireOwnership = false)]
+    public void SpawnNetworkBrushServerRpc()
     {
         // Get the position & rotation of the point from which we draw
         Vector3 originPos = origin.transform.position;
@@ -121,5 +122,10 @@ public class NetworkBrush : NetworkBehaviour
             collider.isTrigger = true;*/
 
         }
+    }
+
+    private void Update()
+    {
+        SpawnNetworkBrushServerRpc();
     }
 }
