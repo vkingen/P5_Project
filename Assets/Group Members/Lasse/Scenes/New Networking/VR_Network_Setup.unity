@@ -7410,7 +7410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &430305747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37758,7 +37758,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &144593282119961549
 Transform:
   m_ObjectHideFlags: 0
@@ -39685,6 +39685,7 @@ GameObject:
   - component: {fileID: 4940549277105400413}
   - component: {fileID: 4940549277105400409}
   - component: {fileID: 6727475463722589255}
+  - component: {fileID: 6727475463722589256}
   m_Layer: 5
   m_Name: UI Sample
   m_TagString: Untagged
@@ -40285,6 +40286,20 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &6727475463722589256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4940549277105400414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893b77965df71944dad965c0040e5844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hostButton: {fileID: 6750799967206011094}
+  clientButton: {fileID: 1548617761}
 --- !u!114 &6727904830527286352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40508,10 +40523,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6419852906225502688}
-        m_TargetAssemblyTypeName: FadeManager, Assembly-CSharp
-        m_MethodName: FadeOut
-        m_Mode: 1
+      - m_Target: {fileID: 1028443418091795093}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
