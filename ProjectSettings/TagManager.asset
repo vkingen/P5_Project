@@ -7,7 +7,11 @@ TagManager:
   - Bicycle_Main
   - Cykelstyr
   - "Cykels\xE6de"
-  - Cykelhjul
+  - CykelhjulB
+  - CykelhjulF
+  - Pedaler
+  - Cykelgear
+  - Cykelkaede
   layers:
   - Default
   - TransparentFX
