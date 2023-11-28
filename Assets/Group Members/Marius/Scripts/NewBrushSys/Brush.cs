@@ -8,7 +8,6 @@ public class Brush : MonoBehaviour
     [SerializeField] private GameObject _brushStrokePrefab = null;
 
     public InputActionProperty drawInput;
-    public InputActionProperty eraseInput;
 
     public GameObject origin;
 
@@ -43,19 +42,6 @@ public class Brush : MonoBehaviour
         if (!drawTriggerPressed && _activeBrushStroke != null) {
             _activeBrushStroke.EndBrushStrokeWithBrushTipPoint(originPos, originRot);
             _activeBrushStroke = null;
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        bool eraseTriggerPressed = drawInput.action.ReadValue<float>() > 0f;
-
-        if (eraseTriggerPressed && _activeBrushStroke == null)
-        {
-            if (other.CompareTag("Mesh"))
-            {
-                Destroy(other.gameObject);
-            }
         }
     }
 }
