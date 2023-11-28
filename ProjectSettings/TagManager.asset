@@ -12,6 +12,7 @@ TagManager:
   - Pedaler
   - Cykelgear
   - Cykelkaede
+  - VR_Headset
   layers:
   - Default
   - TransparentFX
