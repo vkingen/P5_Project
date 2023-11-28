@@ -12,6 +12,8 @@ using UnityEngine;
 
 public class TestRelay : MonoBehaviour
 {
+    [SerializeField] private NetworkSceneChange networkSceneChange;
+
     private async void Start()
     {
         await UnityServices.InitializeAsync();
@@ -23,7 +25,7 @@ public class TestRelay : MonoBehaviour
 
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
     }
-    public TMP_Text code;
+    //public TMP_Text code;
     public async void CreateRelay()
     {
         try
@@ -33,14 +35,17 @@ public class TestRelay : MonoBehaviour
             string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
             //string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
 
-            code.text = joinCode;
-            Debug.Log(joinCode);
+            DontDestroyData dontDestroyData = FindObjectOfType<DontDestroyData>();
+            dontDestroyData.relayCode = joinCode;
+            //code.text = joinCode;
+            //Debug.Log(joinCode);
 
             RelayServerData relayServerData = new RelayServerData(allocation, "dtls");
 
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
 
             NetworkManager.Singleton.StartHost();
+            networkSceneChange.LoadSceneNetwork(); 
         }
         catch (RelayServiceException e)
         {
