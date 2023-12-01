@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -29,6 +30,10 @@ public class Brush : MonoBehaviour
         if (drawTriggerPressed && _activeBrushStroke == null) {
             // Instantiate a copy of the Brush Stroke prefab.
             GameObject brushStrokeGameObject = Instantiate(_brushStrokePrefab);
+
+            NetworkObject networkObject = brushStrokeGameObject.GetComponent<NetworkObject>();
+            networkObject.Spawn();
+
             sceneObjects.Add(brushStrokeGameObject);
 
             // Grab the BrushStroke component from it
