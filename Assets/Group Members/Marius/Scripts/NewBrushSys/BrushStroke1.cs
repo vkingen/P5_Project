@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
 
-public class BrushStroke1 : MonoBehaviour {
+public class BrushStroke : NetworkBehaviour {
     [SerializeField]
     private BrushStrokeMesh _mesh = null;
 
@@ -11,11 +12,12 @@ public class BrushStroke1 : MonoBehaviour {
         public Vector3    position;
         public Quaternion rotation;
     }
+
     private List<RibbonPoint> _ribbonPoints = new List<RibbonPoint>();
 
-    private Vector3    _brushTipPosition;
-    private Quaternion _brushTipRotation;
-    private bool       _brushStrokeFinalized;
+    private NetworkVariable<Vector3> _brushTipPosition = new NetworkVariable<Vector3>();
+    private NetworkVariable<Quaternion> _brushTipRotation = new NetworkVariable<Quaternion>();
+    private NetworkVariable<bool> _brushStrokeFinalized = new NetworkVariable<bool>();
 
     // Smoothing
     private Vector3    _ribbonEndPosition;
@@ -37,8 +39,8 @@ public class BrushStroke1 : MonoBehaviour {
     // Interface
     public void BeginBrushStrokeWithBrushTipPoint(Vector3 position, Quaternion rotation) {
         // Update the model
-        _brushTipPosition = position;
-        _brushTipRotation = rotation;
+        _brushTipPosition.Value = position;
+        _brushTipRotation.Value = rotation;
 
         // Update last ribbon point to match brush tip position & rotation
         _ribbonEndPosition = position;
@@ -47,28 +49,28 @@ public class BrushStroke1 : MonoBehaviour {
     }
 
     public void MoveBrushTipToPoint(Vector3 position, Quaternion rotation) {
-        _brushTipPosition = position;
-        _brushTipRotation = rotation;
+        _brushTipPosition.Value = position;
+        _brushTipRotation.Value = rotation;
     }
 
     public void EndBrushStrokeWithBrushTipPoint(Vector3 position, Quaternion rotation) {
         // Add a final ribbon point and mark the stroke as finalized
-        AddRibbonPoint(position, rotation);
-        _brushStrokeFinalized = true;
+        AddRibbonPoint_ServerRpc(position, rotation);
+        _brushStrokeFinalized.Value = true;
     }
 
 
     // Ribbon drawing
     private void AddRibbonPointIfNeeded() {
         // If the brush stroke is finalized, stop trying to add points to it.
-        if (_brushStrokeFinalized)
+        if (_brushStrokeFinalized.Value)
             return;
 
         if (Vector3.Distance(_ribbonEndPosition, _previousRibbonPointPosition) >= 0.01f ||
             Quaternion.Angle(_ribbonEndRotation, _previousRibbonPointRotation) >= 10.0f) {
 
             // Add ribbon point model to ribbon points array. This will fire the RibbonPointAdded event to update the mesh.
-            AddRibbonPoint(_ribbonEndPosition, _ribbonEndRotation);
+            AddRibbonPoint_ServerRpc(_ribbonEndPosition, _ribbonEndRotation);
 
             // Store the ribbon point position & rotation for the next time we do this calculation
             _previousRibbonPointPosition = _ribbonEndPosition;
@@ -76,7 +78,8 @@ public class BrushStroke1 : MonoBehaviour {
         }
     }
 
-    private void AddRibbonPoint(Vector3 position, Quaternion rotation) {
+    [ServerRpc(RequireOwnership = false)]
+    private void AddRibbonPoint_ServerRpc(Vector3 position, Quaternion rotation) {
         // Create the ribbon point
         RibbonPoint ribbonPoint = new RibbonPoint();
         ribbonPoint.position = position;
@@ -87,16 +90,19 @@ public class BrushStroke1 : MonoBehaviour {
         _mesh.InsertRibbonPoint(position, rotation);
     }
 
+    
+
+
     // Brush tip + smoothing
     private void AnimateLastRibbonPointTowardsBrushTipPosition() {
         // If the brush stroke is finalized, skip the brush tip mesh, and stop animating the brush tip.
-        if (_brushStrokeFinalized) {
+        if (_brushStrokeFinalized.Value) {
             _mesh.skipLastRibbonPoint = true;
             return;
         }
 
-        Vector3    brushTipPosition = _brushTipPosition;
-        Quaternion brushTipRotation = _brushTipRotation;
+        Vector3    brushTipPosition = _brushTipPosition.Value;
+        Quaternion brushTipRotation = _brushTipRotation.Value;
 
         // If the end of the ribbon has reached the brush tip position, we can bail early.
         if (Vector3.Distance(_ribbonEndPosition, brushTipPosition) <= 0.0001f &&
