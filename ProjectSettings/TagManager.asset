@@ -13,6 +13,11 @@ TagManager:
   - Cykelgear
   - Cykelkaede
   - VR_Headset
+  - Interactable
+  - Surface
+  - path
+  - Whiteboard
+  - Drumstick
   layers:
   - Default
   - TransparentFX
