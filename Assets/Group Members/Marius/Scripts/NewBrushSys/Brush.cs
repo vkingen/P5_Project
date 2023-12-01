@@ -3,7 +3,7 @@ using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Brush : MonoBehaviour 
+public class Brush : NetworkBehaviour 
 {
     // Prefab to instantiate when we draw a new brush stroke
     [SerializeField] private GameObject _brushStrokePrefab = null;
@@ -18,7 +18,7 @@ public class Brush : MonoBehaviour
     //public List<GameObject> sceneObjects = new List<GameObject>(); 
 
     [ServerRpc (RequireOwnership = false)]
-    private void SpawnMeshServerRpc(Vector3 pos, Quaternion rot)
+    private void SpawnMesh_ServerRpc(Vector3 pos, Quaternion rot)
     {
 
         GameObject brushStrokeGameObject = Instantiate(_brushStrokePrefab);
@@ -53,7 +53,7 @@ public class Brush : MonoBehaviour
             // Instantiate a copy of the Brush Stroke prefab.
 
 
-            SpawnMeshServerRpc(originPos, originRot);
+            SpawnMesh_ServerRpc(originPos, originRot);
 
             //sceneObjects.Add(brushStrokeGameObject);
 
