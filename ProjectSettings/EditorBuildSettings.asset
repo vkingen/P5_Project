@@ -14,9 +14,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Group Members/Lasse/Scenes/New Networking/VR_Network_Main.unity
     guid: 84c4acb4fe445ea418fb9c001bd91494
-  - enabled: 1
+  - enabled: 0
     path: Assets/Group Members/Anton/Scenes/MMA VR Workshop.unity
     guid: cbeff1f296973354a9665a83e665f7e3
+  - enabled: 1
+    path: Assets/Group Members/Cath/Scenes/DrumSet.unity
+    guid: 5eace3f4533f8e94eb97caf911d70d25
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: b9f0230efd71fdd48a075542e6cdbc42, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 5fc893796ff9cab4083f34c306fa5dec, type: 2}
