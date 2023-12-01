@@ -26,18 +26,22 @@ public class Brush : NetworkBehaviour
         NetworkObject networkObject = brushStrokeGameObject.GetComponent<NetworkObject>();
         networkObject.Spawn();
 
-        InitializeBrushStroke(brushStrokeGameObject, pos, rot);
+        // Grab the BrushStroke component from it
+        _activeBrushStroke = brushStrokeGameObject.GetComponent<BrushStroke1>();
+
+        // Tell the BrushStroke to begin drawing at the current brush position
+        _activeBrushStroke.Initialize(pos, rot);
+        // _activeBrushStroke.BeginBrushStrokeWithBrushTipPoint(pos, rot);
+
+
+        // InitializeBrushStroke(brushStrokeGameObject, pos, rot);
     }
 
     
     private void InitializeBrushStroke(GameObject bs, Vector3 pos, Quaternion rot)
     {
 
-        // Grab the BrushStroke component from it
-        _activeBrushStroke = bs.GetComponent<BrushStroke1>();
-
-        // Tell the BrushStroke to begin drawing at the current brush position
-        _activeBrushStroke.BeginBrushStrokeWithBrushTipPoint(pos, rot);
+        
     }
 
     private void Update() 

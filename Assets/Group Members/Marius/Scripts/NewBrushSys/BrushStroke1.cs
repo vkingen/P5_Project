@@ -2,7 +2,7 @@
 using UnityEngine;
 using Unity.Netcode;
 
-public class BrushStroke : NetworkBehaviour {
+public class BrushStroke1 : NetworkBehaviour {
     [SerializeField]
     private BrushStrokeMesh _mesh = null;
 
@@ -35,6 +35,19 @@ public class BrushStroke : NetworkBehaviour {
         // Add a ribbon segment if the end of the ribbon has moved far enough
         AddRibbonPointIfNeeded();
     }
+
+    /// <summary>
+    /// ONLY CALL ON SERVER!!
+    /// </summary>
+    /// <param name="position"></param>
+    /// <param name="rotation"></param>
+    public void Initialize(Vector3 position, Quaternion rotation)
+    {
+        if (!IsServer) return;
+
+        BeginBrushStrokeWithBrushTipPoint(position, rotation);
+    }
+
 
     // Interface
     public void BeginBrushStrokeWithBrushTipPoint(Vector3 position, Quaternion rotation) {

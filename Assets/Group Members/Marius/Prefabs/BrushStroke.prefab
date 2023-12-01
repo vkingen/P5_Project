@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 3389092540525351846}
   - component: {fileID: 5941687077595384506}
   - component: {fileID: 898364428330677443}
+  - component: {fileID: 8720287935525364309}
   m_Layer: 0
   m_Name: BrushStroke
   m_TagString: Mesh
@@ -164,7 +165,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196413553089462}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07275cc05e970014287f58539763a801, type: 3}
   m_Name: 
@@ -262,3 +263,16 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
+--- !u!114 &8720287935525364309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196413553089462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b684932b04683d4eb884819c79b861a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mesh: {fileID: 114757252374765478}
