@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.UI;
 
 public class VideoPlay : MonoBehaviour
 {
@@ -10,7 +11,10 @@ public class VideoPlay : MonoBehaviour
     public Renderer screenRenderer;
     */
 
+    [SerializeField] Slider volumeSlider;
+
     public VideoClip[] videoClips;
+
 
     private VideoPlayer videoPlayer;
     private int videoClipIndex;
@@ -47,4 +51,6 @@ public class VideoPlay : MonoBehaviour
         }
 
     }
+
+
 }
