@@ -10,7 +10,7 @@ public class OnTriggerEnterEvent : MonoBehaviour
     {
         if(other.CompareTag("Finger"))
         {
-            networkObjectSpawner.SpawnNetworkObjectRuntime();
+            //networkObjectSpawner.SpawnNetworkObjectRuntime();
         }
     }
 }
