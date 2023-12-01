@@ -47,13 +47,6 @@ public class Brush : MonoBehaviour
             _activeBrushStroke.EndBrushStrokeWithBrushTipPoint(originPos, originRot);
             _activeBrushStroke = null;
 
-            //Tilføjet af Marius
-            /*MeshCollider collider = _brushStrokePrefab.GetComponent<MeshCollider>();
-            Mesh meshComponent = _brushStrokePrefab.transform.GetComponentInChildren<Mesh>();
-            collider.sharedMesh = meshComponent;
-            collider.convex = true;
-            collider.isTrigger = true;*/
-
             string gameObjectName = "BrushStroke(Clone)";
 
             if (sceneObjects != null)
