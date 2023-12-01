@@ -26,10 +26,11 @@ public class Brush : NetworkBehaviour
         NetworkObject networkObject = brushStrokeGameObject.GetComponent<NetworkObject>();
         networkObject.Spawn();
 
-        InitializeBrushStroke(brushStrokeGameObject, pos, rot);
+        InitializeBrushStroke_ClientRpc(brushStrokeGameObject, pos, rot);
     }
 
-    private void InitializeBrushStroke(GameObject bs, Vector3 pos, Quaternion rot)
+    [ClientRpc]
+    private void InitializeBrushStroke_ClientRpc(GameObject bs, Vector3 pos, Quaternion rot)
     {
 
         // Grab the BrushStroke component from it
