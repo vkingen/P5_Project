@@ -17,6 +17,28 @@ public class Brush : MonoBehaviour
     //A list to hold the gameobjects instantiated, in order to be able to delete them again
     //public List<GameObject> sceneObjects = new List<GameObject>(); 
 
+    [ServerRpc (RequireOwnership = false)]
+    private void SpawnMeshServerRpc(Vector3 pos, Quaternion rot)
+    {
+
+        GameObject brushStrokeGameObject = Instantiate(_brushStrokePrefab);
+
+        NetworkObject networkObject = brushStrokeGameObject.GetComponent<NetworkObject>();
+        networkObject.Spawn();
+
+        InitializeBrushStroke(brushStrokeGameObject, pos, rot);
+    }
+
+    private void InitializeBrushStroke(GameObject bs, Vector3 pos, Quaternion rot)
+    {
+
+        // Grab the BrushStroke component from it
+        _activeBrushStroke = bs.GetComponent<BrushStroke1>();
+
+        // Tell the BrushStroke to begin drawing at the current brush position
+        _activeBrushStroke.BeginBrushStrokeWithBrushTipPoint(pos, rot);
+    }
+
     private void Update() 
     {
         // Get the position & rotation of the point from which we draw
@@ -29,18 +51,13 @@ public class Brush : MonoBehaviour
         // If the trigger is pressed and we haven't created a new brush stroke to draw, create one!
         if (drawTriggerPressed && _activeBrushStroke == null) {
             // Instantiate a copy of the Brush Stroke prefab.
-            GameObject brushStrokeGameObject = Instantiate(_brushStrokePrefab);
 
-            NetworkObject networkObject = brushStrokeGameObject.GetComponent<NetworkObject>();
-            networkObject.Spawn();
+
+            SpawnMeshServerRpc(originPos, originRot);
 
             //sceneObjects.Add(brushStrokeGameObject);
 
-            // Grab the BrushStroke component from it
-            _activeBrushStroke = brushStrokeGameObject.GetComponent<BrushStroke1>();
 
-            // Tell the BrushStroke to begin drawing at the current brush position
-            _activeBrushStroke.BeginBrushStrokeWithBrushTipPoint(originPos, originRot);
         }
 
         // If the trigger is pressed, and we have a brush stroke, move the brush stroke to the new brush tip position
