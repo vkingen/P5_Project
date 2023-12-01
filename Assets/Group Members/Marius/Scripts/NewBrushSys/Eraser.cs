@@ -19,7 +19,7 @@ public class Eraser : MonoBehaviour
             if (collider.CompareTag("Mesh"))
             {
                 Destroy(collider.gameObject);
-                brush.sceneObjects.Remove(collider.gameObject);
+                //brush.sceneObjects.Remove(collider.gameObject);
             }
         }
     }

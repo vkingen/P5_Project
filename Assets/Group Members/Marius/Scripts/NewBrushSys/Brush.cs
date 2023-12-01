@@ -15,7 +15,7 @@ public class Brush : MonoBehaviour
     private BrushStroke _activeBrushStroke;
 
     //A list to hold the gameobjects instantiated, in order to be able to delete them again
-    public List<GameObject> sceneObjects = new List<GameObject>(); 
+    //public List<GameObject> sceneObjects = new List<GameObject>(); 
 
     private void Update() 
     {
@@ -34,7 +34,7 @@ public class Brush : MonoBehaviour
             NetworkObject networkObject = brushStrokeGameObject.GetComponent<NetworkObject>();
             networkObject.Spawn();
 
-            sceneObjects.Add(brushStrokeGameObject);
+            //sceneObjects.Add(brushStrokeGameObject);
 
             // Grab the BrushStroke component from it
             _activeBrushStroke = brushStrokeGameObject.GetComponent<BrushStroke>();
@@ -61,7 +61,7 @@ public class Brush : MonoBehaviour
 
             string gameObjectName = "BrushStroke(Clone)";
 
-            if (sceneObjects != null)
+            /*if (sceneObjects != null)
             {
                 foreach (GameObject sceneObject in sceneObjects)
                 {
