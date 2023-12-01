@@ -21,8 +21,8 @@ public class NetworkPlayers : NetworkBehaviour
             var clientTurnProvider = GetComponent<ActionBasedSnapTurnProvider>();
             var clientHead = GetComponentInChildren<TrackedPoseDriver>();
             var clientCamera = GetComponentInChildren<Camera>();
-            var clientBrush = GetComponentInChildren<NetworkBrush>();
-            clientBrush.enabled = false;
+            //var clientBrush = GetComponentInChildren<NetworkBrush>();
+            // clientBrush.enabled = false;
             //var interactionManager = GetComponentInChildren<XRInteractionManager>(); // TEST
 
             clientCamera.enabled = false;
