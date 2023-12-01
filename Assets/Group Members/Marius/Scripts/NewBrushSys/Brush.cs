@@ -12,7 +12,7 @@ public class Brush : MonoBehaviour
 
     public GameObject origin;
 
-    private BrushStroke _activeBrushStroke;
+    private BrushStroke1 _activeBrushStroke;
 
     //A list to hold the gameobjects instantiated, in order to be able to delete them again
     //public List<GameObject> sceneObjects = new List<GameObject>(); 
@@ -37,7 +37,7 @@ public class Brush : MonoBehaviour
             //sceneObjects.Add(brushStrokeGameObject);
 
             // Grab the BrushStroke component from it
-            _activeBrushStroke = brushStrokeGameObject.GetComponent<BrushStroke>();
+            _activeBrushStroke = brushStrokeGameObject.GetComponent<BrushStroke1>();
 
             // Tell the BrushStroke to begin drawing at the current brush position
             _activeBrushStroke.BeginBrushStrokeWithBrushTipPoint(originPos, originRot);
