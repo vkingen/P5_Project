@@ -4,25 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Bicycle_Main
-  - Cykelstyr
-  - "Cykels\xE6de"
-  - CykelhjulB
-  - CykelhjulF
-  - Pedaler
-  - Cykelgear
-  - Cykelkaede
-  - VR_Headset
-  - Interactable
-  - Surface
-  - path
-  - Whiteboard
-  - Drumstick
+  - Mesh
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Drum
+  - 
   - Water
   - UI
   - 
