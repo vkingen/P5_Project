@@ -2000,6 +2000,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5985897808236310476, guid: 3b8de880e47db49499557c0e10f12b8e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1731214576}
+    - targetCorrespondingSourceObject: {fileID: 5985897808236310476, guid: 3b8de880e47db49499557c0e10f12b8e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1731214580}
   m_SourcePrefab: {fileID: 100100000, guid: 3b8de880e47db49499557c0e10f12b8e, type: 3}
 --- !u!4 &1048020697 stripped
 Transform:
@@ -2080,7 +2083,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 1858.25
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -3163,12 +3166,24 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.35922322, y: 0.12690437, z: 0.3679311}
   m_Center: {x: -0.00014960578, y: 0.06331641, z: 0.00000017041542}
+--- !u!114 &1731214580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731214569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c730f8c6dd7e57f4eb85f4861e272885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1732517943 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7855197745192018179, guid: 3e4479ea87493eb4482f5df54b6cf3a9, type: 3}
@@ -4180,7 +4195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4410534802303136251, guid: fc4a6138e81f47b48bccd2a456258c32, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
