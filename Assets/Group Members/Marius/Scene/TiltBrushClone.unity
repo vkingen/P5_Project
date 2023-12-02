@@ -1107,6 +1107,7 @@ MonoBehaviour:
   - {r: 0.20478423, g: 0.8679245, b: 0.16703449, a: 1}
   - {r: 0.7297502, g: 0.735849, b: 0.20409396, a: 1}
   - {r: 0.19110003, g: 0.3524954, b: 0.8301887, a: 1}
+  brushPrefab: {fileID: 0}
   textureMode: 0
   isGrabbed: 0
   drawInput:
@@ -1446,13 +1447,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539421064}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4659e906b4142c449853615db4539cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lineOrigin: {fileID: 539421064}
-  drawingMaterial: {fileID: 2100000, guid: 8836d41f85821224e86c3927dd5ba122, type: 2}
+  drawingMaterial: {fileID: 2100000, guid: 5ef6fdc4ff3ddbe46afea1200ec2f272, type: 2}
   lineWidth: 0.0602
   lineWidthFactor: 0.001
   textureMode: 1
@@ -2340,7 +2341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1209836402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2353,7 +2354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4659e906b4142c449853615db4539cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineOrigin: {fileID: 0}
+  lineOrigin: {fileID: 691811683}
   drawingMaterial: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   lineWidth: 0.01
   lineWidthFactor: 0.001
@@ -2373,7 +2374,7 @@ MonoBehaviour:
   changeWidthInput:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Change Width Input
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: 01d19e05-4287-4b1c-ab87-89365081d17a

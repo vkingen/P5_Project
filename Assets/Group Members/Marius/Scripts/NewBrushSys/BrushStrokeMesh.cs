@@ -18,13 +18,6 @@ public class BrushStrokeMesh : MonoBehaviour {
         MeshFilter filter = gameObject.GetComponent<MeshFilter>();
         _mesh = filter.mesh;
 
-        //Tilføjet af Marius
-        /*MeshCollider collider = gameObject.GetComponent<MeshCollider>();
-        collider.sharedMesh = _mesh;
-        collider.convex = true;
-        collider.isTrigger = true;
-        gameObject.transform.parent = null;*/
-
         _vertices = new List<Vector3>();
         _normals  = new List<Vector3>();
 
