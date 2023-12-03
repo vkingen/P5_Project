@@ -4,20 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Drum
-  - CykelhjulF
-  - CykelhjulB
-  - Cykelgear
-  - Bicycle_Main
-  - Pedaler
-  - Cykelkaede
-  - "Cykels\xE6de"
-  - VR_Headset
+  - Mesh
+  - line
+  - color
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Drum
+  - 
   - Water
   - UI
   - 

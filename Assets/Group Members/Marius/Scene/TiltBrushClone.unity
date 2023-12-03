@@ -1107,6 +1107,7 @@ MonoBehaviour:
   - {r: 0.20478423, g: 0.8679245, b: 0.16703449, a: 1}
   - {r: 0.7297502, g: 0.735849, b: 0.20409396, a: 1}
   - {r: 0.19110003, g: 0.3524954, b: 0.8301887, a: 1}
+  brushPrefab: {fileID: 0}
   textureMode: 0
   isGrabbed: 0
   drawInput:
@@ -1446,15 +1447,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539421064}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4659e906b4142c449853615db4539cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lineOrigin: {fileID: 539421064}
-  drawingMaterial: {fileID: 2100000, guid: 8836d41f85821224e86c3927dd5ba122, type: 2}
-  lineWidth: 0.0602
-  lineWidthFactor: 0.001
+  lineWidthSlider: {fileID: 0}
+  lineWidth: 0
+  drawingMaterial: {fileID: 2100000, guid: 5ef6fdc4ff3ddbe46afea1200ec2f272, type: 2}
+  drawingColor: {r: 0, g: 0, b: 0, a: 0}
   textureMode: 1
   drawInput:
     m_UseReference: 1
@@ -1468,19 +1470,6 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  changeWidthInput:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Change Width Input
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: c2faeefb-f006-4acc-bfb6-70d76dc11b10
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  Eraser: {fileID: 0}
 --- !u!1 &640695628
 GameObject:
   m_ObjectHideFlags: 0
@@ -2340,7 +2329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1209836402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2353,10 +2342,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4659e906b4142c449853615db4539cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineOrigin: {fileID: 0}
+  lineOrigin: {fileID: 691811683}
+  lineWidthSlider: {fileID: 0}
+  lineWidth: 0.24
   drawingMaterial: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
-  lineWidth: 0.01
-  lineWidthFactor: 0.001
+  drawingColor: {r: 0, g: 0, b: 0, a: 0}
   textureMode: 1
   drawInput:
     m_UseReference: 1
@@ -2370,19 +2360,6 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  changeWidthInput:
-    m_UseReference: 0
-    m_Action:
-      m_Name: 
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 01d19e05-4287-4b1c-ab87-89365081d17a
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  Eraser: {fileID: 0}
 --- !u!4 &1209836403
 Transform:
   m_ObjectHideFlags: 0
@@ -2446,9 +2423,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineOrigin: {fileID: 1276095473}
+  lineWidthSlider: {fileID: 0}
+  lineWidth: 0
   drawingMaterial: {fileID: 2100000, guid: 8836d41f85821224e86c3927dd5ba122, type: 2}
-  lineWidth: 0.0531
-  lineWidthFactor: 0.001
+  drawingColor: {r: 0, g: 0, b: 0, a: 0}
   textureMode: 1
   drawInput:
     m_UseReference: 1
@@ -2462,19 +2440,6 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  changeWidthInput:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Change Width Input
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: c2faeefb-f006-4acc-bfb6-70d76dc11b10
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  Eraser: {fileID: 0}
 --- !u!136 &1276095476
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2898,7 +2863,7 @@ Camera:
   m_GameObject: {fileID: 1734952217}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
