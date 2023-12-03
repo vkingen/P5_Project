@@ -2815,7 +2815,7 @@ MonoBehaviour:
   lineOrigin: {fileID: 1549093909}
   lineWidthSlider: {fileID: 8969571751977637790}
   lineWidth: 0
-  drawingMaterial: {fileID: 2100000, guid: 4e2e8230aebf1904f8463465574fa462, type: 2}
+  drawingMaterial: {fileID: 2100000, guid: 043f8d4c6e245da45af563e8753a4418, type: 2}
   drawingColor: {r: 0, g: 0, b: 0, a: 0}
   textureMode: 1
   drawInput:
