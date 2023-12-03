@@ -6,6 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class NetworkPlayers : NetworkBehaviour
 {
     [SerializeField] private Vector2 placementArea = new Vector2(-10f, 10f);
+    
 
     public override void OnNetworkSpawn()
     {
@@ -45,7 +46,9 @@ public class NetworkPlayers : NetworkBehaviour
     {
         if(IsClient && IsOwner)
         {
-            transform.position = new Vector3(Random.Range(placementArea.x, placementArea.y), transform.position.y, Random.Range(placementArea.x, placementArea.y));
+            //transform.position = new Vector3(Random.Range(placementArea.x, placementArea.y), transform.position.y, Random.Range(placementArea.x, placementArea.y));
+            transform.position = new Vector3(placementArea.x, transform.position.y, placementArea.y);
+            transform.Rotate(0, -90, 0);
         }
     }
 
