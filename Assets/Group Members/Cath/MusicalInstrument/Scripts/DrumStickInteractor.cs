@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class DrumStickInteractor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+    //// Start is called before the first frame update
+    //void Start()
+    //{
         
-    }
+    //}
 
-    // Update is called once per frame
-    void Update()
-    {
+    //// Update is called once per frame
+    //void Update()
+    //{
         
-    }
-    OnCollissionEnter(Collider collider)
-    {
-        if (collider.tag == "Drum")
-        {
-        audio = GetComponent<AudioSource>;
-        audio.Play;
-        }
-        return;
-    }
+    //}
+    //OnCollissionEnter(Collider collider)
+    //{
+    //    if (collider.tag == "Drum")
+    //    {
+    //    audio = GetComponent<AudioSource>;
+    //    audio.Play;
+    //    }
+    //    return;
+    //}
 }
