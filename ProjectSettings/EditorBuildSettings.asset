@@ -20,9 +20,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Photon/PhotonVoice/Demos/DemoVoiceUI/DemoVoiceUI.unity
     guid: 0ab5c0cab248b1c449cb35dd2672ffdb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Photon/PhotonVoice/Demos/DemoVoicePun/DemoVoicePun-Scene.unity
     guid: a3f3c3b3816924199acba595045624d2
+  - enabled: 1
+    path: Assets/Group Members/Aske/Scenes/DemoScene.unity
+    guid: 3ee7e199eb7f45e438a4eb859bbe7e74
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: b9f0230efd71fdd48a075542e6cdbc42, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 5fc893796ff9cab4083f34c306fa5dec, type: 2}
