@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class BrushStroke : MonoBehaviour {
+public class BrushStroke : MonoBehaviour 
+{
     [SerializeField]
     private BrushStrokeMesh _mesh = null;
 
