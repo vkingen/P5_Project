@@ -2707,7 +2707,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5656316146778966199}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
-        m_MethodName: OnButtonClick
+        m_MethodName: ChangeBrushColor
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 523484172455035988}
@@ -3030,7 +3030,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5656316146778966199}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
-        m_MethodName: OnButtonClick
+        m_MethodName: ChangeBrushColor
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1116733882798484381}
@@ -3190,7 +3190,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5656316146778966199}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
-        m_MethodName: OnButtonClick
+        m_MethodName: ChangeBrushColor
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1326240475917228294}
@@ -3264,7 +3264,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5656316146778966199}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
-        m_MethodName: OnButtonClick
+        m_MethodName: ChangeBrushColor
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1710665064587237631}
@@ -3832,7 +3832,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5656316146778966199}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
-        m_MethodName: OnButtonClick
+        m_MethodName: ChangeBrushColor
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2882102080098471529}
@@ -4005,7 +4005,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5656316146778966199}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
-        m_MethodName: OnButtonClick
+        m_MethodName: ChangeBrushColor
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2959013786845358493}
@@ -4136,7 +4136,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5656316146778966199}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
-        m_MethodName: OnButtonClick
+        m_MethodName: ChangeBrushColor
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 3246319348222759249}
@@ -4357,8 +4357,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 7802633246075011929}
   m_HandleRect: {fileID: 7075964537092014553}
   m_Direction: 0
-  m_MinValue: 0.01
-  m_MaxValue: 0.1
+  m_MinValue: 0.05
+  m_MaxValue: 0.5
   m_WholeNumbers: 0
   m_Value: 0.1
   m_OnValueChanged:
@@ -4486,7 +4486,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5656316146778966199}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
-        m_MethodName: OnButtonClick
+        m_MethodName: ChangeBrushColor
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 3761677861881495335}
@@ -4861,7 +4861,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5656316146778966199}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
-        m_MethodName: OnButtonClick
+        m_MethodName: ChangeBrushColor
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 4253437016358792226}
@@ -5033,7 +5033,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5656316146778966199}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
-        m_MethodName: OnButtonClick
+        m_MethodName: ChangeBrushColor
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 4728254651852653086}
@@ -5089,7 +5089,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5656316146778966199}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
-        m_MethodName: OnButtonClick
+        m_MethodName: ChangeBrushColor
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 4831322788367941435}
@@ -5441,7 +5441,7 @@ MonoBehaviour:
   lineOrigin: {fileID: 1549093909}
   lineWidthSlider: {fileID: 3505852252411935323}
   lineWidth: 0
-  drawingMaterial: {fileID: 2100000, guid: 043f8d4c6e245da45af563e8753a4418, type: 2}
+  drawingMaterial: {fileID: 2100000, guid: fafa9f1ba11914b45818450c43b434f3, type: 2}
   drawingColor: {r: 0, g: 0, b: 0, a: 0}
   textureMode: 1
   drawInput:
@@ -5641,7 +5641,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5656316146778966199}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
-        m_MethodName: OnButtonClick
+        m_MethodName: ChangeBrushColor
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 6290555856391326351}
@@ -5697,7 +5697,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5656316146778966199}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
-        m_MethodName: OnButtonClick
+        m_MethodName: ChangeBrushColor
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 6297175809039967528}
@@ -5723,7 +5723,7 @@ GameObject:
   - component: {fileID: 896225766496085997}
   - component: {fileID: 8148471291277886809}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: BrushUICanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7106,7 +7106,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5656316146778966199}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
-        m_MethodName: OnButtonClick
+        m_MethodName: ChangeBrushColor
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 9049496665865414605}

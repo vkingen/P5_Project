@@ -32,9 +32,9 @@ public class DrawLineManager : MonoBehaviour
     {
         if(lineWidthSlider != null)
         {
-            lineWidthSlider.minValue = 0.001f;
-            lineWidthSlider.maxValue = 0.05f;
-            lineWidthSlider.value = lineWidthSlider.maxValue / 2;
+            lineWidthSlider.minValue = 0.005f;
+            lineWidthSlider.maxValue = 0.1f;
+            lineWidthSlider.value = lineWidthSlider.maxValue / 4;
         }
 
         drawingColor = Color.white;
@@ -126,7 +126,7 @@ public class DrawLineManager : MonoBehaviour
     }
 
     // This method is called when any button is clicked
-    public void OnButtonClick(Button clickedButton)
+    public void ChangeBrushColor(Button clickedButton)
     {
         // Get the Image component of the clicked button
         Image buttonImage = clickedButton.GetComponent<Image>();
@@ -147,5 +147,10 @@ public class DrawLineManager : MonoBehaviour
             Debug.LogWarning("No Image component found on the clicked button.");
         }
     }    
+
+    public void ChangeBrush()
+    {
+
+    }
 }
 
