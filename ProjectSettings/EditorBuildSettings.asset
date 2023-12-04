@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Group Members/Anton/Scenes/MMA Space.unity
+    guid: 3f73e0948977be740b1f1f8f6d769be4
+  - enabled: 1
     path: Assets/Group Members/Lasse/Scenes/MMA Multiplayer/MMAVRWorkshopSetup.unity
     guid: 70796b42f0c0cea419fc1afbecc0b247
   - enabled: 1
