@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589245, b: 0.2978263, a: 1}
+  m_IndirectSpecularColor: {r: 0.1727681, g: 0.21589184, b: 0.29782552, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -48654,6 +48654,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224820567}
   m_Mesh: {fileID: -7186693424180881052, guid: 8f9e4da5668113a4da8b4efea4a9499f, type: 3}
+--- !u!1 &1230310555 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5686134208185362830, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
+  m_PrefabInstance: {fileID: 1455500784}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1234431079
 GameObject:
   m_ObjectHideFlags: 0
@@ -55471,11 +55476,6 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   handAnimator: {fileID: 1455500787}
---- !u!1 &1455500789 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5686134208185362818, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
-  m_PrefabInstance: {fileID: 1455500784}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1463350426
 GameObject:
   m_ObjectHideFlags: 0
@@ -91676,7 +91676,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 109434732153711948}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cc3ce32fe9a2984a81aea30632467a6, type: 3}
+  m_Script: {fileID: 11500000, guid: ecb5afbacd854c644b3dd5a24be591b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   eraseInput:
@@ -91685,7 +91685,7 @@ MonoBehaviour:
       m_Name: Erase Input
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 733d81e4-1966-4f53-a468-d562522e8e12
+      m_Id: f3c5ed75-b325-4839-85a4-a89272f07cc2
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -93245,14 +93245,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8544290882560713700}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4659e906b4142c449853615db4539cad, type: 3}
+  m_Script: {fileID: 11500000, guid: be02959cc23652047b1bb12862fddb2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineOrigin: {fileID: 1455500789}
+  lineOrigin: {fileID: 1230310555}
   lineWidthSlider: {fileID: 7802015871756785074}
-  lineWidth: 0
+  lineWidth: 1
   drawingMaterial: {fileID: 2100000, guid: 043f8d4c6e245da45af563e8753a4418, type: 2}
-  drawingColor: {r: 0, g: 0, b: 0, a: 0}
+  drawingColor: {r: 0, g: 0, b: 0, a: 1}
   textureMode: 1
   drawInput:
     m_UseReference: 1
@@ -93260,7 +93260,7 @@ MonoBehaviour:
       m_Name: Draw Input
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 089786c0-41e9-4509-b115-9f38fb68fcf6
+      m_Id: b69bfa29-e6ba-4c34-8493-7e832f41a1af
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
