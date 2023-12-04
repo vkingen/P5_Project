@@ -240,7 +240,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4137278386212356832}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 2
@@ -372,7 +372,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4137278386212356832}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 2
@@ -1005,7 +1005,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4137278386212356832}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 2
@@ -1137,7 +1137,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4137278386212356832}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 2
@@ -1770,7 +1770,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4137278386212356832}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 2
@@ -2158,7 +2158,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4137278386212356832}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 2
@@ -2290,7 +2290,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4137278386212356832}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 2
@@ -5178,7 +5178,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4137278386212356832}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 2
@@ -5430,7 +5430,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4137278386212356832}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 2
@@ -5562,7 +5562,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4137278386212356832}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 2
@@ -5828,7 +5828,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4137278386212356832}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 2
@@ -6880,7 +6880,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4137278386212356832}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 2
@@ -8370,7 +8370,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4137278386212356832}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 2
@@ -8613,7 +8613,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4137278386212356832}
         m_TargetAssemblyTypeName: DrawLineManager, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 2
