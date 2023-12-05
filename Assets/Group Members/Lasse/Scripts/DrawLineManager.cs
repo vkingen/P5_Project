@@ -148,9 +148,16 @@ public class DrawLineManager : MonoBehaviour
         }
     }    
 
-    public void ChangeBrush()
+    public void ChangeBrush(Button clickedButton)
     {
+        Image buttonImage = clickedButton.GetComponent<Image>();
 
+        if (buttonImage != null)
+        {
+            Material material = buttonImage.material;
+
+            drawingMaterial = material;
+        }
     }
 }
 
