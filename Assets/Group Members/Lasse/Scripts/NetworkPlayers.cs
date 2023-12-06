@@ -6,7 +6,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class NetworkPlayers : NetworkBehaviour
 {
     [SerializeField] private Vector2 placementArea = new Vector2(-10f, 10f);
-    
+
+    [SerializeField] private GameObject brushUICanvas;
 
     public override void OnNetworkSpawn()
     {
@@ -22,10 +23,12 @@ public class NetworkPlayers : NetworkBehaviour
             var clientTurnProvider = GetComponent<ActionBasedSnapTurnProvider>();
             var clientHead = GetComponentInChildren<TrackedPoseDriver>();
             var clientCamera = GetComponentInChildren<Camera>();
+
             //var clientBrush = GetComponentInChildren<NetworkBrush>();
             // clientBrush.enabled = false;
             //var interactionManager = GetComponentInChildren<XRInteractionManager>(); // TEST
 
+            brushUICanvas.SetActive(false);
             clientCamera.enabled = false;
             clientMoveProvider.enableInputActions = false;
             clientTurnProvider.enableTurnLeftRight = false;
