@@ -1,5 +1,6 @@
 fileFormatVersion: 2
-guid: a27805c0c491c634bbb6ba25a663cf1b
+<<<<<<<< HEAD:Assets/Group Members/Anton/Prefabs/3rdPartyAssets/PolygonOffice/Models/SM_Prop_TableFootball_Ball_01.fbx.meta
+guid: 2339cab60a4224548ac3e8e4d38718e6
 timeCreated: 1575342268
 licenseType: Store
 ModelImporter:
@@ -11,6 +12,26 @@ ModelImporter:
     3300000: //RootNode
     4300000: SM_Prop_TableFootball_Ball_01
     9500000: //RootNode
+========
+guid: 9d33d17195b6dea42bb7023836010e8d
+timeCreated: 1446820450
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Box1400
+    100002: Box1401
+    100004: //RootNode
+    400000: Box1400
+    400002: Box1401
+    400004: //RootNode
+    2300000: Box1400
+    2300002: Box1401
+    3300000: Box1400
+    3300002: Box1401
+    4300000: Box1400
+    4300002: Box1401
+>>>>>>>> Develop-Backup:Assets/Photon/PhotonVoice/Demos/DemoVoicePun/Stylized city/Models/bush1.FBX.meta
   materials:
     importMaterials: 1
     materialName: 0
@@ -33,7 +54,6 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -41,10 +61,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -59,9 +76,8 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 3
-    normalCalculationMode: 4
-  importAnimation: 0
+    tangentImportMode: 4
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
@@ -78,7 +94,7 @@ ModelImporter:
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
-    skeletonHasParents: 1
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
   humanoidOversampling: 1
