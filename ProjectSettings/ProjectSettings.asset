@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: P5
-  productName: MMA_VR
+  productName: "VR_Multiplayer_T\xC6ST"
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -860,11 +860,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 05ca1163-8212-4df2-b9bf-36faafbf8694
+  cloudProjectId: 1fb824e9-84df-44a7-a103-1052743ea261
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: "VR_Multiplayer_T\xC6ST (1)"
-  organizationId: akaise21
+  projectName: "VR_Multiplayer_T\xC6ST"
+  organizationId: lasseviking
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
