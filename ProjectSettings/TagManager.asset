@@ -5,6 +5,19 @@ TagManager:
   serializedVersion: 2
   tags:
   - Mesh
+  - line
+  - color
+  - VR_Headset
+  - CykelhjulB
+  - CykelhjulF
+  - Drum
+  - Cykelgear
+  - Bicycle_Main
+  - Pedaler
+  - Cykelkaede
+  - "Cykels\xE6de"
+  - Cykelstyr
+  - BrushUICanvas
   layers:
   - Default
   - TransparentFX

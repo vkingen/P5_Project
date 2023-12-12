@@ -31370,7 +31370,7 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 1815079709}
-    PlayerPrefab: {fileID: 1328719728613139590, guid: 413c20f51ab2d46468e64e7727314ae5, type: 3}
+    PlayerPrefab: {fileID: 1328719728613139590, guid: 4351d7ca6c23978418862e5ac209d6a7, type: 3}
     Prefabs:
       NetworkPrefabsLists:
       - {fileID: 11400000, guid: ff386580728f91e4db1a2c5043fe1938, type: 2}

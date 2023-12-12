@@ -7,6 +7,8 @@ public class NetworkPlayers : NetworkBehaviour
 {
     [SerializeField] private Vector2 placementArea = new Vector2(-10f, 10f);
 
+    [SerializeField] private GameObject brushUICanvas;
+
     public override void OnNetworkSpawn()
     {
         DisableClientInput();
@@ -22,8 +24,11 @@ public class NetworkPlayers : NetworkBehaviour
             var clientHead = GetComponentInChildren<TrackedPoseDriver>();
             var clientCamera = GetComponentInChildren<Camera>();
 
+            //var clientBrush = GetComponentInChildren<NetworkBrush>();
+            // clientBrush.enabled = false;
             //var interactionManager = GetComponentInChildren<XRInteractionManager>(); // TEST
 
+            brushUICanvas.SetActive(false);
             clientCamera.enabled = false;
             clientMoveProvider.enableInputActions = false;
             clientTurnProvider.enableTurnLeftRight = false;
@@ -44,7 +49,9 @@ public class NetworkPlayers : NetworkBehaviour
     {
         if(IsClient && IsOwner)
         {
-            transform.position = new Vector3(Random.Range(placementArea.x, placementArea.y), transform.position.y, Random.Range(placementArea.x, placementArea.y));
+            //transform.position = new Vector3(Random.Range(placementArea.x, placementArea.y), transform.position.y, Random.Range(placementArea.x, placementArea.y));
+            transform.position = new Vector3(placementArea.x, transform.position.y, placementArea.y);
+            transform.Rotate(0, -90, 0);
         }
     }
 

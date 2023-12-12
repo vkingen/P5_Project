@@ -5,18 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Group Members/Lasse/Scenes/New Networking/VR_Network_Setup.unity
-    guid: c6d94ed2e01bc434e8e395a51310ec70
-  - enabled: 0
-    path: Assets/Group Members/Lasse/Scenes/New Networking/VR_Network_Main.unity
-    guid: 84c4acb4fe445ea418fb9c001bd91494
-  - enabled: 0
-    path: Assets/Group Members/Lasse/Scenes/VR_Painting.unity
-    guid: 9889598006b77f94c8458117915bff8d
   - enabled: 1
-    path: Assets/Group Members/Nor/VideoPlayer.unity
-    guid: c239cda37c8674702b755aa5bf17ca5f
+    path: Assets/Group Members/Aske/Scenes/Test Build/MMAVRWorkshopSetup.unity
+    guid: f0838bf3125cf7f49916c17fdc9d443d
+  - enabled: 1
+    path: Assets/Group Members/Aske/Scenes/Test Build/MMAVRWorkshopMain.unity
+    guid: 7a3f63560eae85341a90c3cb1293fc67
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: b9f0230efd71fdd48a075542e6cdbc42, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 5fc893796ff9cab4083f34c306fa5dec, type: 2}
