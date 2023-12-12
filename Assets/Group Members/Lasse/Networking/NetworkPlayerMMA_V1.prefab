@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 5094982443052366562}
   m_Layer: 0
   m_Name: NetworkPlayerMMA_V1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4242,7 +4242,7 @@ GameObject:
   - component: {fileID: 6944409409198657647}
   m_Layer: 5
   m_Name: BrushUICanvas
-  m_TagString: Untagged
+  m_TagString: BrushUICanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
