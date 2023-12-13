@@ -12,7 +12,6 @@ public class GetStringInput : MonoBehaviour
     {
         if (inputField.text.Length == 6)
         {
-            Debug.Log(inputField.text.Length);
             relay.JoinRelay(inputField.text);
         }
         else
