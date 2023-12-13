@@ -12,6 +12,10 @@ public class DrawLineManager : MonoBehaviour
 
     [SerializeField] private float lineWidth;
 
+    [SerializeField] private GameObject brushUIPanel;
+
+    private bool allowDraw = false;
+
     public Material drawingMaterial;
 
     //public Shader drawingShader;
@@ -36,52 +40,75 @@ public class DrawLineManager : MonoBehaviour
             lineWidthSlider.maxValue = 0.1f;
             lineWidthSlider.value = lineWidthSlider.maxValue / 4;
         }
+        drawingColor = Color.white;        
+    }
 
-        drawingColor = Color.white;
-        
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("DrawTrigger"))
+            allowDraw = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.CompareTag("DrawTrigger"))
+            allowDraw = false;
     }
 
     private void Update()
     {
-        if (drawInput.action.ReadValue<float>() > 0f)
+        if (allowDraw)
         {
-            Draw();
+            brushUIPanel.SetActive(true);
+
+            if (drawInput.action.ReadValue<float>() > 0f)
+            {
+                Draw();
+                //GenerateMeshCollider();
+            }
+            else if (currentDrawing != null)
+            {
+                currentDrawing = null;
+
+            }            
         }
-        else if (currentDrawing != null)
+        else
         {
-            currentDrawing = null;
-
+            brushUIPanel.SetActive(false);
         }
-
-        GenerateMeshCollider();
     }
 
     public void GenerateMeshCollider()
     {
         GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag("line");
 
-        GameObject.FindGameObjectsWithTag("line");
+        //GameObject.FindGameObjectsWithTag("line");
 
         if (objectsWithTag.Length > 0)
         {
             // Iterate through the array of objects
             foreach (GameObject obj in objectsWithTag)
             {
-                MeshCollider collider = obj.GetComponent<MeshCollider>();
-                LineRenderer lineRenderer = obj.GetComponent<LineRenderer>();
-
-                if (collider == null)
+                if (obj.CompareTag("line"))
                 {
-                    collider = currentDrawing.gameObject.AddComponent<MeshCollider>();
+                    MeshCollider collider = obj.GetComponent<MeshCollider>();
+                    LineRenderer lineRenderer = obj.GetComponent<LineRenderer>();
+
+                    if (collider == null)
+                    {
+                        collider = currentDrawing.gameObject.AddComponent<MeshCollider>();
+                    }
+
+                    Mesh mesh = new Mesh();
+
+                    lineRenderer.BakeMesh(mesh);
+
+                    collider.sharedMesh = mesh;
+                    collider.convex = true;
+                    collider.isTrigger = true;
+
+                    //obj.AddComponent<MeshColliderGeneratedFlag>();
                 }
-
-                Mesh mesh = new Mesh();
-
-                lineRenderer.BakeMesh(mesh);
-
-                collider.sharedMesh = mesh;
-                collider.convex = true;
-                collider.isTrigger = true;
             }
         }
     }
@@ -93,7 +120,6 @@ public class DrawLineManager : MonoBehaviour
 
         if (currentDrawing == null)
         {
-
             index = 0;
 
             //Vi laver en ny instance af drawingMaterial fordi vi ellers ikke kan ændre farven på materialet, da det vil ændre farven på alle streger.
@@ -112,6 +138,8 @@ public class DrawLineManager : MonoBehaviour
             currentDrawing.positionCount = 1;
             currentDrawing.SetPosition(0, lineOrigin.transform.position);
             currentDrawing.tag = "line";
+
+
         }
         else
         {
@@ -122,6 +150,22 @@ public class DrawLineManager : MonoBehaviour
                 currentDrawing.positionCount = index + 1;
                 currentDrawing.SetPosition(index, lineOrigin.transform.position);
             }
+
+            MeshCollider collider = currentDrawing.GetComponent<MeshCollider>();
+            LineRenderer lineRenderer = currentDrawing.GetComponent<LineRenderer>();
+
+            if (collider == null)
+            {
+                collider = currentDrawing.gameObject.AddComponent<MeshCollider>();
+            }
+
+            Mesh mesh = new Mesh();
+
+            lineRenderer.BakeMesh(mesh);
+
+            collider.sharedMesh = mesh;
+            collider.convex = true;
+            collider.isTrigger = true;
         }
     }
 
@@ -148,7 +192,7 @@ public class DrawLineManager : MonoBehaviour
         }
     }    
 
-    public void ChangeBrush(Button clickedButton)
+    public void ChangeBrushMaterial(Button clickedButton)
     {
         Image buttonImage = clickedButton.GetComponent<Image>();
 
@@ -157,6 +201,13 @@ public class DrawLineManager : MonoBehaviour
             Material material = buttonImage.material;
 
             drawingMaterial = material;
+
+            textureMode = LineTextureMode.Tile;
+
+            if(drawingMaterial.name == "HeartBrush")
+            {
+                textureMode = LineTextureMode.Stretch;
+            }
         }
     }
 }
