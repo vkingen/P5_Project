@@ -25,20 +25,17 @@ public class TestRelay : MonoBehaviour
 
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
     }
-    //public TMP_Text code;
+
     public async void CreateRelay()
     {
         try
         {
-            Allocation allocation = await RelayService.Instance.CreateAllocationAsync(3); // 3 = number of possible players - 1: Host + 3
+            Allocation allocation = await RelayService.Instance.CreateAllocationAsync(6); // 6 = number of possible players
 
             string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
-            //string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
 
             DontDestroyData dontDestroyData = FindObjectOfType<DontDestroyData>();
             dontDestroyData.relayCode = joinCode;
-            //code.text = joinCode;
-            //Debug.Log(joinCode);
 
             RelayServerData relayServerData = new RelayServerData(allocation, "dtls");
 
@@ -52,7 +49,6 @@ public class TestRelay : MonoBehaviour
             Debug.Log(e);
         }
     }
-
     public async void JoinRelay(string joinCode)
     {
         try
@@ -68,60 +64,7 @@ public class TestRelay : MonoBehaviour
         }
         catch (RelayServiceException e)
         {
-            // Delete inputfield text = "";
             Debug.Log(e);
         }
     }
-
-    //public async void CreateRelay() // Deprecated
-    //{
-    //    try
-    //    {
-    //        Allocation allocation = await RelayService.Instance.CreateAllocationAsync(3); // 3 = number of possible players - 1: Host + 3
-
-    //        string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
-
-    //        Debug.Log(joinCode);
-
-    //        NetworkManager.Singleton.GetComponent<UnityTransport>().SetHostRelayData(
-    //            allocation.RelayServer.IpV4,
-    //            (ushort)allocation.RelayServer.Port,
-    //            allocation.AllocationIdBytes,
-    //            allocation.Key,
-    //            allocation.ConnectionData
-    //        );
-
-    //        NetworkManager.Singleton.StartHost();
-    //    }
-    //    catch (RelayServiceException e)
-    //    {
-    //        Debug.Log(e);
-    //    }
-    //}
-
-
-    //public async void JoinRelay(string joinCode) // Deprecated
-    //{
-    //    try
-    //    {
-    //        JoinAllocation joinAllocation = await RelayService.Instance.JoinAllocationAsync(joinCode);
-
-
-
-    //        NetworkManager.Singleton.GetComponent<UnityTransport>().SetClientRelayData(
-    //            joinAllocation.RelayServer.IpV4,
-    //            (ushort)joinAllocation.RelayServer.Port,
-    //            joinAllocation.AllocationIdBytes,
-    //            joinAllocation.Key,
-    //            joinAllocation.ConnectionData,
-    //            joinAllocation.HostConnectionData
-    //        );
-
-    //        NetworkManager.Singleton.StartClient();
-    //    }
-    //    catch (RelayServiceException e)
-    //    {
-    //        Debug.Log(e);
-    //    }
-    //}
 }
