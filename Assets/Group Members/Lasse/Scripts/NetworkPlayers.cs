@@ -24,6 +24,7 @@ public class NetworkPlayers : NetworkBehaviour
             var clientTurnProvider = GetComponent<ActionBasedSnapTurnProvider>();
             var clientHead = GetComponentInChildren<TrackedPoseDriver>();
             var clientCamera = GetComponentInChildren<Camera>();
+            var audioListener = GetComponentInChildren<AudioListener>();
 
             brushUICanvas.SetActive(false);
 
@@ -32,6 +33,7 @@ public class NetworkPlayers : NetworkBehaviour
             clientTurnProvider.enableTurnAround = false;
             clientHead.enabled= false;
             clientCamera.enabled = false;
+            audioListener.enabled = false;
 
             foreach (var controller in clientControllers)
             {

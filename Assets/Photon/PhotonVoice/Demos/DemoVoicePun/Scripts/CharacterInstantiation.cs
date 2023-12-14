@@ -69,7 +69,7 @@ namespace ExitGames.Demos.DemoPunVoice
                 Vector3 spawnPos;
                 Quaternion spawnRotation;
                 this.GetSpawnPoint(out spawnPos, out spawnRotation);
-                Camera.main.transform.position += spawnPos;
+                //Camera.main.transform.position += spawnPos;
 
                 if (this.manualInstantiation)
                 {

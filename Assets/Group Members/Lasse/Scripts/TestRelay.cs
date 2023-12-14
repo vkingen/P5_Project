@@ -67,4 +67,28 @@ public class TestRelay : MonoBehaviour
             Debug.Log(e);
         }
     }
+
+    public async void CreateServerRelay()
+    {
+        try
+        {
+            Allocation allocation = await RelayService.Instance.CreateAllocationAsync(6); // 6 = number of possible players
+
+            string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
+
+            DontDestroyData dontDestroyData = FindObjectOfType<DontDestroyData>();
+            dontDestroyData.relayCode = joinCode;
+
+            RelayServerData relayServerData = new RelayServerData(allocation, "dtls");
+
+            NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
+
+            NetworkManager.Singleton.StartServer();
+            networkSceneChange.LoadSceneNetwork();
+        }
+        catch (RelayServiceException e)
+        {
+            Debug.Log(e);
+        }
+    }
 }

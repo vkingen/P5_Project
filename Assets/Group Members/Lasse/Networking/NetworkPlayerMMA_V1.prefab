@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1bc89ca62d96664d9cdc662455f557e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placementArea: {x: 7, y: 4.5}
+  placementArea: {x: 24, y: 2}
   brushUICanvas: {fileID: 415479604097440321}
 --- !u!114 &5094982443052366562
 MonoBehaviour:
@@ -5357,7 +5357,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8260050106799617706}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!114 &8186899622180657990
 MonoBehaviour:
   m_ObjectHideFlags: 0
