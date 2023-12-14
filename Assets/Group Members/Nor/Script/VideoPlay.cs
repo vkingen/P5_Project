@@ -73,6 +73,7 @@ public class VideoPlay : MonoBehaviour
 
         videoPlayer.clip = videoClips[videoClipIndex];
         videoPlayer.Play();
+        TotalTimeUI();
     }
 
     public void PlayPause()
@@ -86,8 +87,10 @@ public class VideoPlay : MonoBehaviour
         {
             videoPlayer.clip = videoClips[videoClipIndex];
             videoPlayer.Play();
+            TotalTimeUI();
             //screenRenderer.material = pauseButtonMaterial;
         }
+
 
     }
 

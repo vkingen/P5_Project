@@ -11,19 +11,67 @@ public class RadioController : MonoBehaviour
 
     [SerializeField] Slider volumeSlider;
 
+
+    public AudioClip[] audioClips;
+
+    private int audioClipIndex;
+
+
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        audioClipIndex = 0;
+    }
     void Start()
     {
-        radioAudioSource = GetComponent<AudioSource>(); 
+        radioAudioSource = GetComponent<AudioSource>();
     }
 
-    public void PlayAudio()
+
+    public void SetNextClip()
     {
+        audioClipIndex++;
+
+        if (audioClipIndex >= audioClips.Length)
+        {
+            //videoClipIndex = videoClipIndex % videoClips.Length;
+            audioClipIndex = 0;
+        }
+
+        radioAudioSource.clip = audioClips[audioClipIndex];
         radioAudioSource.Play();
+
     }
 
-    public void PauseAudio()
+
+    public void SetPreviousClip()
     {
-        radioAudioSource.Pause();
+        audioClipIndex--;
+
+        if (audioClipIndex < 0)
+        {
+            //videoClipIndex = videoClipIndex % videoClips.Length;
+            audioClipIndex = 0;
+        }
+
+        radioAudioSource.clip = audioClips[audioClipIndex];
+        radioAudioSource.Play();
+
+    }
+
+    public void PlayPause()
+    {
+        if (radioAudioSource.isPlaying)
+        {
+            radioAudioSource.Pause();
+            //screenRenderer.material = playButtonMaterial;
+        }
+        else
+        {
+            radioAudioSource.clip = audioClips[audioClipIndex];
+            radioAudioSource.Play();
+            //screenRenderer.material = pauseButtonMaterial;
+        }
     }
 }
