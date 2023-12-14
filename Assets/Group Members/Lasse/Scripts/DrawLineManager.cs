@@ -8,9 +8,6 @@ public class DrawLineManager : MonoBehaviour
 {
     public GameObject lineOrigin;
 
-    [SerializeField] private GameObject leftHand;
-    [SerializeField] private GameObject leftSphere;
-
     [SerializeField] private GameObject rightHand;
     [SerializeField] private GameObject rightSphere;
 
@@ -66,9 +63,7 @@ public class DrawLineManager : MonoBehaviour
         if (allowDraw)
         {
             rightHand.SetActive(false);
-            leftHand.SetActive(false);
 
-            leftSphere.SetActive(true);
             rightSphere.SetActive(true);
 
             brushUIPanel.SetActive(true);
@@ -87,9 +82,7 @@ public class DrawLineManager : MonoBehaviour
         else
         {
             rightHand.SetActive(true);
-            leftHand.SetActive(true);
 
-            leftSphere.SetActive(false);
             rightSphere.SetActive(false);
 
             brushUIPanel.SetActive(false);
