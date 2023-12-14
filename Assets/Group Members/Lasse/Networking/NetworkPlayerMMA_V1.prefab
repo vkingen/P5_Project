@@ -401,7 +401,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &207208377237595824
 Transform:
   m_ObjectHideFlags: 0
@@ -2898,8 +2898,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineOrigin: {fileID: 5415212808932634652}
-  leftHand: {fileID: 4804820756042813846}
-  leftSphere: {fileID: 2141802268811178899}
   rightHand: {fileID: 8492684979778457303}
   rightSphere: {fileID: 5415212808932634652}
   lineWidthSlider: {fileID: 4058299978516614843}
