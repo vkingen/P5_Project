@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
+using TMPro;
 
 public class VideoPlay : MonoBehaviour
 {
@@ -10,6 +11,14 @@ public class VideoPlay : MonoBehaviour
     [SerializeField] Slider volumeSlider;
 
     public VideoClip[] videoClips;
+
+    public TMP_Text currentMinutes;
+    public TMP_Text currentSeconds;
+    public TMP_Text totalMinutes;
+    public TMP_Text totalSeconds;
+
+    public PlayHeadMover playHeadmover;
+
 
 
     private VideoPlayer videoPlayer;
@@ -20,6 +29,21 @@ public class VideoPlay : MonoBehaviour
         videoClipIndex = 0;
         videoPlayer = GetComponent<VideoPlayer>();
     }
+
+
+    public void Start()
+    {
+        videoPlayer.targetTexture.Release();
+    }
+    public void Update()
+    {
+        if (videoPlayer.isPlaying)
+        {
+            SetCurrentTimeUI();
+            playHeadmover.MovePlayHead(CalculatePlayedFraction());
+        }
+    }
+
 
     public void SetNextClip()
     {
@@ -33,7 +57,9 @@ public class VideoPlay : MonoBehaviour
 
         videoPlayer.clip = videoClips[videoClipIndex];
         videoPlayer.Play();
+        TotalTimeUI();
     }
+
 
     public void SetPreviousClip()
     {
@@ -64,6 +90,33 @@ public class VideoPlay : MonoBehaviour
         }
 
     }
+
+
+    void SetCurrentTimeUI()
+    {
+        string minutes = Mathf.Floor((int)videoPlayer.time / 60).ToString("00");
+        string seconds = ((int)videoPlayer.time % 60).ToString("00");
+
+        currentMinutes.text = minutes;
+        currentSeconds.text = seconds;
+    }
+
+
+    void TotalTimeUI()
+    {
+        string minutes = Mathf.Floor((int)videoPlayer.clip.length / 60).ToString("00");
+        string seconds = ((int)videoPlayer.clip.length % 60).ToString("00");
+
+        totalMinutes.text = minutes;
+        totalSeconds.text = seconds;
+    }
+
+    double CalculatePlayedFraction()
+    {
+        double fraction = (double)videoPlayer.frame / (double)videoPlayer.clip.frameCount;
+        return fraction;
+    }
+
 
 
 }
