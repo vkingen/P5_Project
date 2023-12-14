@@ -27,11 +27,11 @@ public class NetworkPlayers : NetworkBehaviour
 
             brushUICanvas.SetActive(false);
 
-            clientCamera.enabled = false;
             clientMoveProvider.enableInputActions = false;
             clientTurnProvider.enableTurnLeftRight = false;
             clientTurnProvider.enableTurnAround = false;
             clientHead.enabled= false;
+            clientCamera.enabled = false;
 
             foreach (var controller in clientControllers)
             {
