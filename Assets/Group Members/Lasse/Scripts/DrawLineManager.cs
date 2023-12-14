@@ -8,6 +8,14 @@ public class DrawLineManager : MonoBehaviour
 {
     public GameObject lineOrigin;
 
+    [SerializeField] private GameObject rightHand;
+    [SerializeField] private GameObject rightSphere;
+
+    [SerializeField] private GameObject leftHand;
+    //[SerializeField] private GameObject leftSphere;
+
+    [SerializeField] private MeshRenderer leftSphereMesh;
+
     [SerializeField] private Slider lineWidthSlider;
 
     [SerializeField] private float lineWidth;
@@ -34,6 +42,8 @@ public class DrawLineManager : MonoBehaviour
 
     private void Start()
     {
+        //leftSphereMesh = leftSphere.GetComponent<MeshRenderer>();
+
         if(lineWidthSlider != null)
         {
             lineWidthSlider.minValue = 0.005f;
@@ -59,6 +69,13 @@ public class DrawLineManager : MonoBehaviour
     {
         if (allowDraw)
         {
+            leftHand.SetActive(false);
+            leftSphereMesh.enabled = true;
+
+            rightHand.SetActive(false);
+
+            rightSphere.SetActive(true);
+
             brushUIPanel.SetActive(true);
 
             if (drawInput.action.ReadValue<float>() > 0f)
@@ -74,6 +91,12 @@ public class DrawLineManager : MonoBehaviour
         }
         else
         {
+            rightHand.SetActive(true);
+            rightSphere.SetActive(false);
+
+            leftHand.SetActive(true);
+            leftSphereMesh.enabled = false;
+
             brushUIPanel.SetActive(false);
         }
     }

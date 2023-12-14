@@ -6,6 +6,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class NetworkPlayers : NetworkBehaviour
 {
     [SerializeField] private Vector2 placementArea = new Vector2(-10f, 10f);
+
+    [SerializeField] private GameObject brushUICanvas;
     
 
     public override void OnNetworkSpawn()
@@ -22,22 +24,21 @@ public class NetworkPlayers : NetworkBehaviour
             var clientTurnProvider = GetComponent<ActionBasedSnapTurnProvider>();
             var clientHead = GetComponentInChildren<TrackedPoseDriver>();
             var clientCamera = GetComponentInChildren<Camera>();
-            //var clientBrush = GetComponentInChildren<NetworkBrush>();
-            // clientBrush.enabled = false;
-            //var interactionManager = GetComponentInChildren<XRInteractionManager>(); // TEST
+            var audioListener = GetComponentInChildren<AudioListener>();
 
-            clientCamera.enabled = false;
+            brushUICanvas.SetActive(false);
+
             clientMoveProvider.enableInputActions = false;
             clientTurnProvider.enableTurnLeftRight = false;
             clientTurnProvider.enableTurnAround = false;
             clientHead.enabled= false;
-
-            //interactionManager.enabled = false; // TEST
+            clientCamera.enabled = false;
+            audioListener.enabled = false;
 
             foreach (var controller in clientControllers)
             {
-                controller.enableInputActions= false;
-                controller.enableInputTracking= false;
+                controller.enableInputActions = false;
+                controller.enableInputTracking = false;
             }
         }
     }
@@ -46,7 +47,6 @@ public class NetworkPlayers : NetworkBehaviour
     {
         if(IsClient && IsOwner)
         {
-            //transform.position = new Vector3(Random.Range(placementArea.x, placementArea.y), transform.position.y, Random.Range(placementArea.x, placementArea.y));
             transform.position = new Vector3(placementArea.x, transform.position.y, placementArea.y);
             transform.Rotate(0, -90, 0);
         }
