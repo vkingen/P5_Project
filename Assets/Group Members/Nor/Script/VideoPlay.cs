@@ -33,7 +33,7 @@ public class VideoPlay : MonoBehaviour
 
     public void Start()
     {
-        videoPlayer.targetTexture.Release();
+        //videoPlayer.targetTexture.Release();
     }
     public void Update()
     {
