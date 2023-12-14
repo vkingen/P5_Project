@@ -708,3 +708,5 @@ $RECYCLE.BIN/
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/unity,visualstudio,visualstudiocode,windows,macos,linux,csharp
+Assets/Photon/PhotonVoice/PhotonVoiceLibs/x86_64/AudioIn.dll
+Assets/Photon/PhotonVoice/PhotonVoiceLibs/x86_64/opus_egpv.dll
