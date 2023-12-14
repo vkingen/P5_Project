@@ -8,6 +8,12 @@ public class DrawLineManager : MonoBehaviour
 {
     public GameObject lineOrigin;
 
+    [SerializeField] private GameObject leftHand;
+    [SerializeField] private GameObject leftSphere;
+
+    [SerializeField] private GameObject rightHand;
+    [SerializeField] private GameObject rightSphere;
+
     [SerializeField] private Slider lineWidthSlider;
 
     [SerializeField] private float lineWidth;
@@ -59,6 +65,12 @@ public class DrawLineManager : MonoBehaviour
     {
         if (allowDraw)
         {
+            rightHand.SetActive(false);
+            leftHand.SetActive(false);
+
+            leftSphere.SetActive(true);
+            rightSphere.SetActive(true);
+
             brushUIPanel.SetActive(true);
 
             if (drawInput.action.ReadValue<float>() > 0f)
@@ -74,6 +86,12 @@ public class DrawLineManager : MonoBehaviour
         }
         else
         {
+            rightHand.SetActive(true);
+            leftHand.SetActive(true);
+
+            leftSphere.SetActive(false);
+            rightSphere.SetActive(false);
+
             brushUIPanel.SetActive(false);
         }
     }
