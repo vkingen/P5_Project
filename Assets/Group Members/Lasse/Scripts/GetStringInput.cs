@@ -18,6 +18,5 @@ public class GetStringInput : MonoBehaviour
         {
             inputField.text = "";
         }
-        
     }
 }
